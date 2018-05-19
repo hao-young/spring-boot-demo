@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -43,26 +42,26 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- 热启动支持 begin -->
+		<!--spring boot 热启动一 begin-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- 热启动支持 end -->
+		<!--spring boot 热启动一 end-->
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!--spring boot 热启动二 begin-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- 热启动支持 begin -->
+				<artifactId>spring-boot-maven-plugin </artifactId>
 				<configuration>
 					<fork>true</fork>
 				</configuration>
-				<!-- 热启动支持 end -->
 			</plugin>
+			<!-- spring boot 热启动二 end -->
 		</plugins>
 	</build>
 

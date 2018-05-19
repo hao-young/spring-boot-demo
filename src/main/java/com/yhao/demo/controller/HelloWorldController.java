@@ -20,6 +20,16 @@ public class HelloWorldController {
 	 */
 	@RequestMapping("/hello")
 	public String index() {
-		return "Hello world!";
+		return "Hello world!哦喔噢";
+	}
+	
+	@RequestMapping("/hello2")
+	public String hello() {
+		return "Hello2";
+	}
+	
+	@RequestMapping("/hello3")
+	public String hello3() {
+		return "Hello3";
 	}
 }
