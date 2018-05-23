@@ -1,82 +1,50 @@
 package com.yhao.demo.entity;
 
-import java.io.Serializable;
+import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.alibaba.fastjson.annotation.JSONField;
 
-/*
- * Entity中不映射成列的字段得加@Transient注解，不加注解也会映射成列
- */
-@Entity
-public class User implements Serializable {
+public class User {
 
-	private static final long serialVersionUID = 1L;
-	@Id
-	@GeneratedValue
-	private Long id;
-	@Column(nullable = false, unique = true)
-	private String userName;
-	@Column(nullable = false, unique = true)
-	private String passWord;
-	@Column(nullable = false, unique = true)
-	private String nickName;
-	@Column(nullable = true, unique = false)
-	private String email;
+	private Integer id;
+	
+	private String username;
+	
+	private String password;
+	
+	@JSONField(format="yyyy-MM-dd")
+	private Date birthday;
 
-	public User() {
-		super();
-	}
-
-	public User(Long id, String userName, String passWord, String nickName, String email) {
-		super();
-		this.id = id;
-		this.userName = userName;
-		this.passWord = passWord;
-		this.nickName = nickName;
-		this.email = email;
-	}
-
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
-	public String getPassWord() {
-		return passWord;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getNickName() {
-		return nickName;
+	public Date getBirthday() {
+		return birthday;
 	}
 
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 }
