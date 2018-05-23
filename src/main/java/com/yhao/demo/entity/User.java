@@ -1,10 +1,16 @@
 package com.yhao.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
-public class User {
+public class User implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Integer id;
 	
