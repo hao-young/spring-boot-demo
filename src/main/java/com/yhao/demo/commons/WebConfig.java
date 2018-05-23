@@ -14,11 +14,10 @@ import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.yhao.demo.commons.filter.MyFilter;
 
+
 @Configuration
 public class WebConfig {
 	
-	
-
 	@Bean
 	public RemoteIpFilter remoteIpFilter() {
 		return new RemoteIpFilter();

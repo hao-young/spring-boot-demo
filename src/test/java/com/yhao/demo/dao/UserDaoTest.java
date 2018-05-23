@@ -14,6 +14,7 @@ import com.yhao.demo.entity.User;
 @SpringBootTest
 public class UserDaoTest {
 
+	
 	@Autowired
 	private UserDao userDao;
 	

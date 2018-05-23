@@ -8,14 +8,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-
 import com.yhao.demo.dao.UserDao;
 import com.yhao.demo.entity.User;
 
 
 @Repository
 public class UserDaoImpl implements UserDao {
-	
     @Autowired
     private JdbcTemplate jdbcTemplate;
     
