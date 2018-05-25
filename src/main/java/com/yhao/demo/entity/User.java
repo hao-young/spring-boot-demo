@@ -13,13 +13,25 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Integer id;
-	
+
 	private String username;
-	
+
 	private String password;
-	
-	@JSONField(format="yyyy-MM-dd")
+
+	@JSONField(format = "yyyy-MM-dd")
 	private Date birthday;
+
+	public User() {
+		super();
+	}
+
+	public User(Integer id, String username, String password, Date birthday) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.birthday = birthday;
+	}
 
 	public Integer getId() {
 		return id;
