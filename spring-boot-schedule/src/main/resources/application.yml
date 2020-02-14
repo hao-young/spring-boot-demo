@@ -1,0 +1,45 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: Schedule                                     #Quartz调度中心
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/schedule
+    username: scheduler
+    password: admin1234
+    tomcat:
+      initialSize: 20
+      maxActive: 100
+      maxIdle: 100
+      minIdle: 20
+      maxWait: 10000
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+
+
+#mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: cn.ac.yhao.schedule.entity
+
+quartz:
+  job-store-type: jdbc      #数据库方式
+  properties:
+    org:
+      quartz:
+        scheduler:
+          instanceName: clusteredScheduler
+          instanceId: AUTO    #ID设置为自动获取 每一个必须不同 （所有调度器实例中是唯一的）
+        jobStore:
+          class: org.quartz.impl.jdbcjobstore.JobStoreTX
+          driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+          tablePrefix: QRTZ_
+          isClustered: true
+          clusterCheckinInterval: 10000
+          useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
