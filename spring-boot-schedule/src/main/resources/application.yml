@@ -21,7 +21,7 @@ spring:
 #mybatis-plus配置
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
-  type-aliases-package: cn.ac.yhao.schedule.entity
+  type-aliases-package: cn.ac.yhao.schedule.model
 
 quartz:
   job-store-type: jdbc      #数据库方式
