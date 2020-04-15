@@ -1,0 +1,9 @@
+server:
+  port: 8030
+
+swagger:
+  title: spring-boot-starter-swagger
+  description: Starter for swagger 2.x
+  version: 1.4.0.RELEASE
+
+
