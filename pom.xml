@@ -13,9 +13,8 @@
         <module>spring-boot-hello</module>
         <module>spring-boot-schedule</module>
         <module>spring-boot-check</module>
-        <module>spring-boot-hdfs</module>
-        <module>spring-boot-elasticsearch</module>
         <module>spring-boot-swagger</module>
+        <module>spring-boot-web</module>
     </modules>
 
     <build>
